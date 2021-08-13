@@ -3,6 +3,7 @@ public class PuzzlingTest {
         Puzzling tester = new Puzzling();
 
         System.out.println(tester.getTenRolls());
-        System.out.println(tester.getRandomLetter);
+        System.out.println(tester.getRandomLetter());
+
     }
 }

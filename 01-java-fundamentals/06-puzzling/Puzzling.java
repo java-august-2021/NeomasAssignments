@@ -15,13 +15,21 @@ public class Puzzling {
     }
 
     //get a random letter a-z
-    public String[] getRandomLetter() {
-        String[] myLetterList = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
-        Random randomIndex = new Random();
-        int randomAlphabet = randomIndex.nextInt(25);
-        return myLetterList(randomAlphabet)";
+    public char getRandomLetter() {
+        char[] alphabet = new char[26];
+        int i=0;
+        for(char letter = 'a'; letter <= 'z'; ++letter){
+            alphabet[i] = letter;
+            i += 1;
+        }
+        int myIndex = getRandomInt();
+        return alphabet[myIndex];
+    }
 
-        // What I want to do is first have it generate the random number. Then I want it to iterate through a for loop, and when i matches the random number generated, I want it to print/get/return myLetterList[i]. Which should return the value stored at that index. 
-
+    // get a random int method to use inside the random letter method
+    public int getRandomInt(){
+        Random alphaIndex = new Random();
+        int myRandomNum = alphaIndex.nextInt(25);
+        return myRandomNum;
     }
 }
