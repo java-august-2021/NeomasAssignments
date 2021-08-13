@@ -18,18 +18,32 @@ public class Puzzling {
     public char getRandomLetter() {
         char[] alphabet = new char[26];
         int i=0;
+        Random alphaIndex = new Random();
+        int myRandomNum = alphaIndex.nextInt(25);
+
         for(char letter = 'a'; letter <= 'z'; ++letter){
             alphabet[i] = letter;
             i += 1;
         }
-        int myIndex = getRandomInt();
-        return alphabet[myIndex];
+
+        return alphabet[myRandomNum];
     }
 
     // get a random int method to use inside the random letter method
-    public int getRandomInt(){
-        Random alphaIndex = new Random();
-        int myRandomNum = alphaIndex.nextInt(25);
-        return myRandomNum;
+    public String generatePassword() {
+        String newPassword = "";
+        for(int i = 1; i <= 8; i++) {
+            char nextLetter = getRandomLetter();
+            newPassword += nextLetter;
+        }
+        return newPassword;
+    }
+
+    public ArrayList getNewPasswordSet(int num) {
+        ArrayList<String> myPasswordSet = new ArrayList<String>();
+        for(int i = 1; i <= num; i++) {
+            myPasswordSet.add(generatePassword());
+        }
+        return myPasswordSet;
     }
 }
