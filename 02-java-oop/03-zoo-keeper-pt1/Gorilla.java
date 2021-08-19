@@ -2,15 +2,16 @@ public class Gorilla extends Mammal {
     // attributes
     private int bananasEaten=0;
 
-    // methods
-    public Gorilla(){
-        //this.bananasEaten=bananasEaten;
+    public Gorilla(int energyLevel){
+        super(energyLevel);
     }
+
+    // methods
     public void throwSomething(){
         System.out.println("Oh no! The gorilla threw something!");
         this.energyLevel-=5;
     }
-
+    
     public void eatBananas(int numOfBananas){
         System.out.println("Yum! The gorilla LOVES bananas");
         this.bananasEaten+=numOfBananas;
