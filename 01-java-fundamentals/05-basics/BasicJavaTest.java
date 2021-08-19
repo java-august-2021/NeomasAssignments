@@ -22,8 +22,8 @@ public class BasicJavaTest {
         //System.out.println(tester.getAverage(testArray3));
 
         //System.out.println(tester.greaterThanY(testArray1, 11));
-        for(int i=0; i < tester.squareValues(testArray2).length; i++) {
-            System.out.println(testArray2[i]);
+        for(int i=0; i < tester.squareValues(testArray3).length; i++) {
+            System.out.println(testArray3[i]);
         }
     }
 }

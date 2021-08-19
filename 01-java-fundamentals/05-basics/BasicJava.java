@@ -76,16 +76,17 @@ public class BasicJava {
         return greaterThanArray.size();
     }
 
-    // square each value in an array
-    // there is a bug. the squares are not calculating correctly
-    // public int[] squareValues(int[] sampleArray) {
-    //     for(int i = 0; i < sampleArray.length; i++) {
-    //         if(sampleArray[i] < 0){
-    //             sampleArray[i] = -(sampleArray[i]*sampleArray[i]);
-    //         } else {
-    //             sampleArray[i] = (sampleArray[i]*sampleArray[i]); 
-    //         }
-    //     }
-    //     return sampleArray;
-    // }
+    //square each value in an array
+    //there is a bug. the squares are not calculating correctly
+    public int[] squareValues(int[] sampleArray) {
+        for(int i = 0; i < sampleArray.length; i++) {
+            int squareMe = sampleArray[i];
+            if(squareMe < 0){
+                sampleArray[i] = -(squareMe*squareMe);
+            } else {
+                sampleArray[i] = (squareMe*squareMe); 
+            }
+        }
+        return sampleArray;
+    }
 }
